@@ -1,7 +1,10 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
-var LoginController = require('./routes/loginController');
 
+app.use(cors());
+
+var LoginController = require('./routes/loginController');
 app.use('/api/login', LoginController);
 
 module.exports = app;
